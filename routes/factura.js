@@ -24,7 +24,7 @@ let logger = log4js.getLogger('app');
 router.get('/sendBill', (req, res, next) => {
     logger.error('============ INICIO METHOD [sendBill] ===================');
     let url = 'https://e-beta.sunat.gob.pe/ol-ti-itcpfegem-beta/billService?wsdl';
-    let base64str = util.base64_encode(constantes.RUTA_ARCHIVOS_REQUEST + '20100066603-02-F002-2.zip', logger);
+    let base64str = util.base64_encode(constantes.RUTA_ARCHIVOS_REQUEST + '20100066603-01-F002-1.zip', logger);
     let request = {
         "fileName": 'factura_00001_14042019.zip',
         "contentFile": base64str,
